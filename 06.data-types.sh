@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER1=24589
+NUMBER1=Manikantha
 NUMBER2=87513
 
 TIMESTAMP=$(date)
