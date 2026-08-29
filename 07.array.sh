@@ -1,6 +1,6 @@
 #!/bi/bash
 
-MOVIES=("Fast&Furious" "Hitman" "Spiderman" "Suits" "Sniper" "Iron Man" "I'm just trying to push the code from VS only")
+MOVIES=("Fast&Furious" "Hitman" "Spiderman" "Suits" "Sniper" "Iron Man")
 
 echo "First Movie: ${MOVIES[0]}"
 echo "First Movie: ${MOVIES[3]}"
