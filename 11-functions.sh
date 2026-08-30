@@ -34,6 +34,7 @@ else
     # exit 0
 fi
 
+dnf list installed nginx
 if [ $? -ne 0 ] #$? The exit status of the most recently executed command
 then
     echo "nginx is not installed ... going to install it"
@@ -46,6 +47,7 @@ else
     # exit 0
 fi
 
+dnf list installed python3
 if [ $? -ne 0 ] #$? The exit status of the most recently executed command
 then
     echo "python3 is not installed ... going to install it"
