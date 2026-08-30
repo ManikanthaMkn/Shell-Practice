@@ -11,7 +11,7 @@ else
 fi #IF I am not root → show error and stop. Otherwise → continue.
 
 VALIDATE(){
-    if [ $1 -eq 0 ]
+    if [ "$1" -eq 0 ]
     then 
         echo "Installing $2 is ... SUCCESS"
     else 
@@ -28,7 +28,7 @@ then
     
     dnf install mysql -y
 
-    VALIDATE $? "MySQL"
+    VALIDATE "$?" "MySQL"
 else
     echo "MySQL is already installed ... Nothing to do"
     # exit 0
@@ -40,7 +40,7 @@ then
     
     dnf install nginx -y
 
-    VALIDATE $? "ngnix"
+    VALIDATE "$?" "ngnix"
 else
     echo "nginx is already installed ... Nothing to do"
     # exit 0
@@ -52,7 +52,7 @@ then
     
     dnf install python3 -y
 
-    VALIDATE $? "python3"
+    VALIDATE "$?" "python3"
 else
     echo "python3 is already installed ... Nothing to do"
     # exit 0
