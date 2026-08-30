@@ -12,6 +12,7 @@ fi
 
 dnf list installed mysql
 
+#This part of code is running but the same code commented below is not running what might be the issue
 if [ $? -ne 0 ]
 then
     echo "MySQL is not installed ... going to install it"
