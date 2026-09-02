@@ -2,8 +2,8 @@
 
 echo -e "\e[31m Hello colors"
 
-echo "Hello no Colors"
-echo -e "Hello World  \e[0m"
+echo "Hello no Colors \e[0m"
+echo -e "Hello World"
 echo -e "\e[31m Manikantha"
 echo -e "\e[32m Manikantha"
 echo -e "\e[33m Manikantha"
