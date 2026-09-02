@@ -41,7 +41,7 @@ fi
 dnf list installed nginx
 if [ $? -ne 0 ] #$? The exit status of the most recently executed command
 then
-    echo -e"$R nginx is not installed $N... $G going to install it $N"
+    echo -e "$R nginx is not installed $N ... $G going to install it $N"
     
     dnf install nginx -y
 
