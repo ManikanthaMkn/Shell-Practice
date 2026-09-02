@@ -35,7 +35,7 @@ dnf list installed mysql &>>$LOG_FILES
 
 if [ $? -ne 0 ] #$? The exit status of the most recently executed command
 then
-    echo -e "$R MySQL is not installed $N ... $G going to install it $N" &| tee -a $LOG_FILES
+    echo -e "$R MySQL is not installed $N ... $G going to install it $N" | tee -a $LOG_FILES
     
     dnf install mysql -y &>>$LOG_FILES
 
