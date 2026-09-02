@@ -32,7 +32,7 @@ VALIDATE(){
     fi
 }
 
-for PACKAGE in ${PACKAGE[@]}
+for PACKAGE in ${PACKAGES[@]}
 do
     dnf list installed $PACKAGE &>>$LOG_FILE
     if [ $? -ne 0 ] #$? The exit status of the most recently executed command
