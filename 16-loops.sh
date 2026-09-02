@@ -37,7 +37,7 @@ do
     dnf list installed $package &>>$LOG_FILES
     if [ $? -ne 0 ] #$? The exit status of the most recently executed command
     then
-        echo -e "$R $package is not installed $N ... $G going to install it $N" | tee -a $LOG_FILES
+        echo "$R $package is not installed $N ... $G going to install it $N" | tee -a $LOG_FILES
         dnf install $package -y &>>$LOG_FILES
         VALIDATE "$?" "$package"
     else
