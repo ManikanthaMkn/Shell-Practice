@@ -36,9 +36,7 @@ dnf list installed mysql &>>$LOG_FILES
 if [ $? -ne 0 ] #$? The exit status of the most recently executed command
 then
     echo -e "$R MySQL is not installed $N ... $G going to install it $N" | tee -a $LOG_FILES
-    
     dnf install mysql -y &>>$LOG_FILES
-
     VALIDATE "$?" "MySQL"
 else
     echo -e "$Y MySQL is already installed $N ... Nothing to do" | tee -a $LOG_FILES
@@ -49,9 +47,7 @@ dnf list installed nginx &>>$LOG_FILES
 if [ $? -ne 0 ] #$? The exit status of the most recently executed command
 then
     echo -e "$R nginx is not installed $N ... $G going to install it $N" | tee -a $LOG_FILES
-    
     dnf install nginx -y &>>$LOG_FILES
-
     VALIDATE "$?" "ngnix"
 else
     echo -e "$Y nginx is already installed $N ... Nothing to do" | tee -a $LOG_FILES
@@ -62,9 +58,7 @@ dnf list installed python3 &>>$LOG_FILES
 if [ $? -ne 0 ] #$? The exit status of the most recently executed command
 then
     echo -e "$R python3 is not installed $N ... $G going to install it $N" | tee -a $LOG_FILES
-    
     dnf install python3 -y &>>$LOG_FILES
-
     VALIDATE "$?" "python3"
 else
     echo -e "$Y python3 is already installed $N ... Nothing to do" | tee -a $LOG_FILES
