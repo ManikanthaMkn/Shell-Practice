@@ -14,13 +14,13 @@ PACKAGES=("mysql" "python" "nginx" "httpd")
 mkdir -p $LOGS_FOLDER
 echo "Script Started Executing at:: $(date)" &>>$LOG_FILE
 
-if [ $USERID -ne 0 ]
-then
-    echo -e "$R ERROR:: Please run this script with root access $N" | tee -a $LOG_FILE
-    exit 1
-else
-    echo "You are running with root access" | tee -a $LOG_FILE
-fi #IF I am not root → show error and stop. Otherwise → continue.
+# if [ $USERID -ne 0 ]
+# then
+#     echo -e "$R ERROR:: Please run this script with root access $N" | tee -a $LOG_FILE
+#     exit 1
+# else
+#     echo "You are running with root access" | tee -a $LOG_FILE
+# fi #IF I am not root → show error and stop. Otherwise → continue.
 
 VALIDATE(){
     if [ "$1" -eq 0 ]
@@ -37,11 +37,11 @@ do
     dnf list installed "$package" &>>$LOG_FILE
     if [ $? -ne 0 ] #$? The exit status of the most recently executed command
     then
-        echo "$R $package is not installed $N ... $G going to install it $N" | tee -a $LOG_FILE
-        dnf install $package -y &>>$LOG_FILE
+        echo "$R "$package" is not installed $N ... $G going to install it $N" | tee -a $LOG_FILE
+        dnf install "$package" -y &>>$LOG_FILE
         VALIDATE "$?" "$package"
     else
-        echo -e "$Y $package is already installed $N ... Nothing to do" | tee -a $LOG_FILE
+        echo -e "$Y "$package" is already installed $N ... Nothing to do" | tee -a $LOG_FILE
         # exit 0
     fi
 done
