@@ -41,7 +41,7 @@ fi
 dnf list installed nginx
 if [ $? -ne 0 ] #$? The exit status of the most recently executed command
 then
-    echo "nginx is not installed ... going to install it"
+    echo -e"$R nginx is not installed $N... $G going to install it $N"
     
     dnf install nginx -y
 
@@ -54,7 +54,7 @@ fi
 dnf list installed python3
 if [ $? -ne 0 ] #$? The exit status of the most recently executed command
 then
-    echo "python3 is not installed ... going to install it"
+    echo -e "$R python3 is not installed $N ... $G going to install it $N"
     
     dnf install python3 -y
 
