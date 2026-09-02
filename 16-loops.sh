@@ -23,7 +23,7 @@ else
 fi #IF I am not root → show error and stop. Otherwise → continue.
 
 VALIDATE(){
-    if [ "$1" -eq 0 ]
+    if [ $1 -eq 0 ]
     then 
         echo -e "Installing $2 is ... $G SUCCESS $N" | tee -a $LOG_FILE
     else 
