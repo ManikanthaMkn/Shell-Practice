@@ -1,4 +1,5 @@
 #!/bin/bash
+#Installing the required packages and applying color formatting where necessary.
 
 USERID=$(id -u)
 R="\e[31m"

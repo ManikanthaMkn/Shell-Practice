@@ -10,8 +10,8 @@ LOGS_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILES="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
-mkdir -p $LOGS_FOLDER
-echo "Script Started Executing at:: $(date)" &>>$LOG_FILES
+mkdir -p $LOGS_FOLDER # -p creates the directory if it doesn't exist and doesn't throw an error if it already exists.
+echo "Script Started Executing at:: $(date)" &>>$LOG_FILES # &>> adds both normal output and error messages to the log file without overwriting it.
 
 if [ $USERID -ne 0 ]
 then

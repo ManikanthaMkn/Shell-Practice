@@ -33,7 +33,7 @@ VALIDATE(){
 }
 
 #for PACKAGE in ${PACKAGES[@]}
-for PACKAGE in $@
+for PACKAGE in $@ #Here, $@ represents all the arguments passed to the shell script. The for loop takes each argument one by one and stores it in the PACKAGE variable. The commands inside the loop are then executed for each package.
 do
     dnf list installed $PACKAGE &>>$LOG_FILE
     if [ $? -ne 0 ] #$? The exit status of the most recently executed command
